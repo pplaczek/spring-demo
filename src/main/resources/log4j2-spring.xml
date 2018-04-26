@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d %-5p %c:%L - %m%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef level="INFO" ref="console" />
+        </Root>
+        <Logger name="org.springframework" level="DEBUG" additivity="false">
+            <Appender-ref ref="console" level="DEBUG" />
+        </Logger>
+    </Loggers>
+</Configuration>
